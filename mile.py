@@ -1,13 +1,21 @@
 class Mile:
-    def __init__(self, ime):
+    def __init__(self, ime, plata):
         self.ime = ime
-
+        self.plata = plata
 
     def __str__(self):
-        return f"{self.ime}"
+        return f"{self.ime} {self.plata}"
+
+    def uvecaj_platu(self, iznos):
+        self.plata += iznos
 
 
 
-mile = Mile("Mile")
+
+
+mile = Mile("Mile", 20000)
 print(mile)
+mile.uvecaj_platu(20000)
+print(mile)
+
 
